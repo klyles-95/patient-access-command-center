@@ -1,0 +1,91 @@
+
+
+<!-- MAIN CONTENT -->
+<div class="modal-dialog modal-md animated flipInX">
+  <br><br><br><br>
+  <div class="modal-content">
+    <div class="modal-header">
+      <!-- <button type="button" class="close" (click)="mdModal.hide()" aria-hidden="false">
+        &times;
+      </button> -->
+      <h4 class="modal-title">
+        <img src="assets/images/ascensionLogo.png" width="150" alt="ascension">
+      </h4>
+    </div>
+    <div class="modal-body no-padding">
+      <!-- <form id="login-form" class="smart-form" > -->
+      <form #loginForm="ngForm" class="smart-form" novalidate="novalidate" (submit)="loginUser($event)">
+        <fieldset>
+          <section>
+            <div class="row">
+              <label class="label col col-2">Username<span class="text-danger">*</span></label>
+              <div class="col col-10">
+                <label class="input"> <i class="icon-append fa fa-user"></i>
+                  
+                    <input type="text" class= "form-control" id="username" name = "username" #uName="ngModel" placeholder="ENTER AD ACCOUNT" [(ngModel)]="loginUser.username">
+                    <br>
+                    <div *ngIf="username?.errors && (username.dirty || username.touched)"
+                      class="alert alert-danger animated shake">
+                      Please enter your user name
+                    </div> 
+                   </label>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="row">
+              <label class="label col col-2">Password<span class="text-danger">*</span></label>
+              <div class="col col-10">
+                <label class="input"> <i class="icon-append fa fa-lock"></i>
+                    <input type="password" id="password" name="password" #password="ngModel" placeholder="Password" required="required"
+                    [(ngModel)]="loginUser.password">
+                    <br>
+                    <div *ngIf="password.errors && (password.dirty || password.touched)"
+                      class="alert alert-danger animated shake">
+                      Please enter your password
+                    </div>
+                  </label>
+              </div>
+            </div>
+          </section>
+          <footer>
+            <span class="pull-left"> <span class="text-danger">*</span> <em> Required </em> </span>
+            <button type="submit" value= "submit" class="btn btn-primary" [disabled]="!loginForm.form.valid">
+                 Sign in
+            </button>
+          </footer>
+        </fieldset>
+
+        <!-- <footer>
+          <span class="pull-left"> <span class="text-danger">*</span> <em> Required </em> </span>
+          <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid">
+               Sign in
+              </button>
+        </footer> -->
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- <div bsModal #auth2Modal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Confirmation</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="hideauth2Modal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="lead">
+            <span class="text-success text-center"> <strong> Data Updated </strong> </span>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default pull-right" (click)="hideauth2Modal()">
+              Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> -->
