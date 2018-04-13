@@ -152,7 +152,7 @@ app.post('/signup', function(req, res, next) {
 
 app.get('/login', function(req, res, next) {
   res.render('pages/login', {
-    user: req.user,
+    user: req.username,
     url: req.url,
   });
 });
