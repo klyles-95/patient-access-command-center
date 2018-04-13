@@ -22,7 +22,7 @@
               <div class="col col-10">
                 <label class="input"> <i class="icon-append fa fa-user"></i>
                   
-                    <input type="text" class= "form-control" id="username" name = "username" #uName="ngModel" placeholder="ENTER AD ACCOUNT" [(ngModel)]="loginUser.username">
+                    <input type="text" class= "form-control" id="username" name = "username" #uName="ngModel" placeholder="Please Enter Username" [(ngModel)]="loginUser.username">
                     <br>
                     <div *ngIf="username?.errors && (username.dirty || username.touched)"
                       class="alert alert-danger animated shake">
